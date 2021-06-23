@@ -14,22 +14,24 @@ public class demo_voya extends Library {
 		navigateURL();
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		WebElement shadowHost = driver.findElement(By.xpath("//div[@id='block-voya-footer']//v-footer"));
-		WebElement shadowRoot = (WebElement) js.executeScript("return arguments[0].shadowRoot",shadowHost);
+		WebElement shadowHost = getElement("//div[@id='block-voya-footer']//v-footer");
+		//WebElement shadowRoot = (WebElement) js.executeScript("return arguments[0].shadowRoot",shadowHost);
+		WebElement shadowRoot = getShadowRootElement(shadowHost);
 		WebElement element = shadowRoot.findElement(By.cssSelector("#menu_list > ul:nth-child(2) > li:nth-child(4) > a"));
 		//String linkText = element.getText();
-		//System.out.println(element.getText() );
+		System.out.println(element.getText() );
 		
-		//element.click();
-		js.executeScript("document.querySelector(\"#block-voya-footer > v-footer\").shadowRoot.querySelector(\"#menu_list > ul:nth-child(2) > li:nth-child(4) > a\").click();");
+		element.click();
+		//js.executeScript("document.querySelector(\"#block-voya-footer > v-footer\").shadowRoot.querySelector(\"#menu_list > ul:nth-child(2) > li:nth-child(4) > a\").click();");
 		//System.out.println(js.executeScript("document.querySelector(\"#block-voya-footer > v-footer\").shadowRoot.querySelector(\"#menu_list > ul:nth-child(2) > li:nth-child(4) > a\").value;"));
 		
 		//js.executeScript(".click()");
 		
-		List<WebElement> links = shadowRoot.findElements(By.cssSelector("a"));
-		System.out.println("Items Count: " + links.size());
-		for(WebElement ele: links) 
-			System.out.println(ele.getText());
+		/*
+		 * List<WebElement> links = shadowRoot.findElements(By.cssSelector("a"));
+		 * System.out.println("Items Count: " + links.size()); for(WebElement ele:
+		 * links) System.out.println(ele.getText());
+		 */
 	}
 
 }

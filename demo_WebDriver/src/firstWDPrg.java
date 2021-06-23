@@ -11,9 +11,8 @@ public class firstWDPrg extends Library {
 		
 		driver = openBrowser();
 		driver.get("http://www.google.com");
-		//System.out.println(driver.getCurrentUrl());
-		//navigateURL();
-		
+		System.out.println(driver.getPageSource());
+		//navigateURL();	
 		
 		
 		/*

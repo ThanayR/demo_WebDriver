@@ -13,5 +13,6 @@
 	<classpathentry kind="lib" path="D:/SeleniumDump/Java/SeleniumJars/libs/guava-25.0-jre.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumDump/Java/SeleniumJars/libs/okhttp-3.11.0.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumDump/Java/SeleniumJars/libs/okio-1.14.0.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
